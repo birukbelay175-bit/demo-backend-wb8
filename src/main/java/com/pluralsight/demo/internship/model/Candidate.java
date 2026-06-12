@@ -12,11 +12,14 @@ public class Candidate {
     private Long id;
 
     private String name;
-    
+
     private String email;
-    
+
     private String fieldOfStudy;
+
     private LocalDateTime registeredAt;
+
+    private boolean visible;
 
     // Constructors
     public Candidate() {
@@ -60,6 +63,7 @@ public class Candidate {
     public void setFieldOfStudy(String fieldOfStudy) {
         this.fieldOfStudy = fieldOfStudy;
     }
+
     public LocalDateTime getRegisteredAt() {
         return registeredAt;
     }
@@ -68,4 +72,11 @@ public class Candidate {
         this.registeredAt = registeredAt;
     }
 
+    public boolean isVisible() {
+        return visible;
+    }
+
+    public void setVisible(boolean visible) {
+        this.visible = visible;
+    }
 }
