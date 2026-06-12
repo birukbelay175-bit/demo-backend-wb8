@@ -3,7 +3,7 @@ package com.pluralsight.demo.internship.service;
 import com.pluralsight.demo.internship.model.Candidate;
 import com.pluralsight.demo.internship.repository.CandidateRepository;
 import org.springframework.stereotype.Service;
-
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -26,6 +26,7 @@ public class CandidateService {
     }
 
     public Candidate createCandidate(Candidate candidate) {
+        candidate.setRegisteredAt(LocalDateTime.now());
         return candidateRepository.save(candidate);
     }
 
